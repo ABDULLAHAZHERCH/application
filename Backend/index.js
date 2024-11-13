@@ -37,6 +37,9 @@ mongoose
   .then(() => console.log("Database connected"))
   .catch((err) => console.error("Database connection error:", err));
 
+app.get("/", (req, res) => {
+  res.json("AAC");
+});
 app.get("/weather", (req, res) => {
   const { city } = req.query;
 
