@@ -4,7 +4,7 @@ import "./App.css";
 import ProductList from "./ProductList";
 
 const MongoCrud = () => {
-  const [isLogin, setIsLogin] = useState(true); 
+  const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +13,9 @@ const MongoCrud = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const url = `http://localhost:5000/auth/${isLogin ? "login" : "signup"}`;
+    const url = `https://application-api-nine.vercel.app/auth/${
+      isLogin ? "login" : "signup"
+    }`;
 
     try {
       const response = await axios.post(url, {

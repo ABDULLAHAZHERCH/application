@@ -18,7 +18,7 @@ app.use("/products", products);
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://appch.vercel.app",
   })
 );
 

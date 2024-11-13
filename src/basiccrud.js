@@ -12,7 +12,7 @@ const CrudComponent = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/data");
+      const response = await axios.get("https://application-api-nine.vercel.app/data");
       setData(response.data);
       setError(null);
     } catch (err) {
@@ -29,7 +29,7 @@ const CrudComponent = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/data",
+        "https://application-api-nine.vercel.app/data",
         newRecord
       );
       setData((prevData) => [...prevData, response.data]);
@@ -49,7 +49,7 @@ const CrudComponent = () => {
     setLoading(true);
     try {
       const response = await axios.put(
-        `http://localhost:5000/data/${editRecord.id}`,
+        `https://application-api-nine.vercel.app/data/${editRecord.id}`,
         editRecord
       );
       setData((prevData) =>
@@ -69,7 +69,7 @@ const CrudComponent = () => {
   const deleteRecord = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/data/${id}`);
+      await axios.delete(`https://application-api-nine.vercel.app/data/${id}`);
       setData((prevData) => prevData.filter((item) => item.id !== id));
       setError(null);
     } catch (err) {
