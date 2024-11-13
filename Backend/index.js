@@ -8,6 +8,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const API_KEY = process.env.API_KEY;
 const BASE_URL = process.env.BASE_URL;
+const URL =
+  process.env.URI ||
+  "mongodb+srv://chaudhary:ligmaballz@chaudhary.dfezm.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=chaudhary";
 
 require("dotenv").config();
 
@@ -30,7 +33,7 @@ app.use((err, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.URI, {
+  .connect(URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
