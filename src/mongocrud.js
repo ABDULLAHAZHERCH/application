@@ -13,9 +13,7 @@ const MongoCrud = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const url = `https://application-api-nine.vercel.app/auth/${
-      isLogin ? "login" : "signup"
-    }`;
+    const url = `http://localhost:5000/auth/${isLogin ? "login" : "signup"}`;
 
     try {
       const response = await axios.post(url, {

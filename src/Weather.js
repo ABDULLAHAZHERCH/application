@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.css"
 
 const Weather = () => {
   const [city, setCity] = useState("");
@@ -22,7 +22,7 @@ const Weather = () => {
 
     try {
       const response = await fetch(
-        `https://application-api-nine.vercel.app/weather?city=${city}`
+        `http://localhost:5000/weather?city=${city}`
       );
 
       if (!response.ok) {

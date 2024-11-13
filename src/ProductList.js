@@ -22,7 +22,7 @@ function ProductList() {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("https://application-api-nine.vercel.app/products");
+      const response = await axios.get("http://localhost:5000/products");
       setProducts(response.data);
       setError(null);
     } catch (err) {
@@ -41,7 +41,7 @@ function ProductList() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://application-api-nine.vercel.app/products",
+        "http://localhost:5000/products",
         newProduct
       );
       setProducts((prevProducts) => [...prevProducts, response.data]);
@@ -67,7 +67,7 @@ function ProductList() {
     setLoading(true);
     try {
       const response = await axios.put(
-        `https://application-api-nine.vercel.app/products/${editProduct.id}`,
+        `http://localhost:5000/products/${editProduct.id}`,
         editProduct
       );
       setProducts((prevProducts) =>
@@ -88,7 +88,7 @@ function ProductList() {
   const deleteProduct = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`https://application-api-nine.vercel.app/products/${id}`);
+      await axios.delete(`http://localhost:5000/products/${id}`);
       setProducts((prevProducts) =>
         prevProducts.filter((product) => product._id !== id)
       );
