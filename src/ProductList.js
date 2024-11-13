@@ -103,10 +103,6 @@ function ProductList() {
   useEffect(() => {
     fetchProducts();
   }, []);
-  useEffect(() => {
-    console.log(editProduct._id);
-  }, [editProduct]);
-
   return (
     <div className="crud-container">
       <h1 className="greeting">Product List</h1>
