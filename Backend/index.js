@@ -20,7 +20,7 @@ app.use("/products", products);
 
 app.use(
   cors({
-    origin: "https://application-6vtbbnr8w-chaudharys-projects.vercel.app/",
+    origin: "https://appch.vercel.app",
   })
 );
 
