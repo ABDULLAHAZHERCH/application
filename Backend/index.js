@@ -20,7 +20,7 @@ app.use("/products", products);
 
 app.use(
   cors({
-    origin: "https://appch.vercel.app",
+    origin: "https://application-6vtbbnr8w-chaudharys-projects.vercel.app/",
   })
 );
 
@@ -30,13 +30,10 @@ app.use((err, req, res, next) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://chaudhary:ligmaballz@chaudhary.dfezm.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=chaudhary",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Database connected"))
   .catch((err) => console.error("Database connection error:", err));
 
