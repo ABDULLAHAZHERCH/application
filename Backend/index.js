@@ -6,8 +6,10 @@ const auth = require("./routes/auth");
 const products = require("./routes/products");
 const app = express();
 const PORT = process.env.PORT || 5000;
-const API_KEY = "dfe5bad73c116b95fbf1b980553caa0d";
-const BASE_URL = "api.openweathermap.org";
+const API_KEY = process.env.API_KEY;
+const BASE_URL = process.env.BASE_URL;
+
+require("dotenv").config();
 
 let db = [];
 
