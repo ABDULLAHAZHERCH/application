@@ -1,0 +1,207 @@
+.App {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  flex: 1;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.navbar button {
+  background-color: #707070;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #a4a4a4;
+}
+
+.navbar button.active {
+  background-color: #cbcbcb;
+  color: black;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  align-items: center;
+  padding: 20px;
+}
+
+.greeting {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.weather-container {
+  padding: 20px;
+}
+
+.weather-info {
+  background-color: #8d8b8b;
+  color: #000;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.weather-info h2 {
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.input {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  margin-right: 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  background-color: #3d3d3d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #b6b6b6;
+  color:#000;
+}
+
+.table-container {
+  background-color: #8d8b8b;
+  color: #000;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.form-container {
+  background-color: #8d8b8b;
+  color: #000000;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin-top: 20px;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 5px 25px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #4f4f4f;
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+
+.data-table tr:hover {
+  background-color: #717171;
+}
+
+.data-table td button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.login-container {
+  background-color: #8d8b8b;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.toggle-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
